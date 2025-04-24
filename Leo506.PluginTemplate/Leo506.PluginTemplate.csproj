@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <PackageId>Leo506.PluginTemplates</PackageId>
+        <PackageVersion>1.0.0</PackageVersion>
+        <Title>Front Plugins Template</Title>
+        <Authors>Artem Levin</Authors>
+        <Description>Front Plugins Template For Rider And Visual Studio</Description>
+        <PackageProjectUrl>https://github.com/Leo506/FrontPluginTemplates</PackageProjectUrl>
+
+        <PackageType>Template</PackageType>
+        <TargetFramework>net9.0</TargetFramework>
+        <IncludeContentInPack>true</IncludeContentInPack>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <ContentTargetFolders>content</ContentTargetFolders>
+        <NoWarn>$(NoWarn);NU5128</NoWarn>
+        <NoDefaultExcludes>true</NoDefaultExcludes>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <LocalizeTemplates>false</LocalizeTemplates>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.TemplateEngine.Tasks" Version="*" PrivateAssets="all" IsImplicitlyDefined="true"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="content\**\*" Exclude="content\**\bin\**;content\**\obj\**"/>
+        <Compile Remove="**\*"/>
+    </ItemGroup>
+
+</Project>
