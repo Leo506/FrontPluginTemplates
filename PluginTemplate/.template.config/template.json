@@ -1,0 +1,44 @@
+{
+    "author": "Artem Levin",
+    "name": "Plugin template",
+    "description": "Plugin template",
+    "identity": "ArtemLevin.PluginTemplate.1.0",
+    "shortname": "frontplugin",
+    "tags": {
+        "language": "C#"
+    },
+    "sourceName": "PluginTemplate",
+    "symbols": {
+        "FrontAPI": {
+            "type": "parameter",
+            "description": "Version of front API to use",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "V7"
+                },
+                {
+                    "choice": "V8"
+                }
+            ],
+            "defaultValue": "V7",
+            "replaces": "API_VERSION"
+        },
+        "UseApiV8": {
+            "type": "computed",
+            "value": "FrontAPI == \"V8\""
+        },
+        "UseApiV7": {
+            "type": "computed",
+            "value": "FrontAPI == \"V7\""
+        },
+        "License": {
+            "type": "parameter",
+            "datatype": "int",
+            "description": "License module id for your plugin",
+            "replaces": "LICENSE_MODULE_ID",
+            "isRequired": "true"
+        }
+    }
+
+}

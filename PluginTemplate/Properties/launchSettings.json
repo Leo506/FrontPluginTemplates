@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Front": {
+      "commandName": "Executable",
+      "executablePath": "%ProgramFiles%\\iiko\\iikoRMS\\Front.Net\\Resto.Front.Api.Host.exe",
+      "commandLineArgs": "/a=$(TargetPath) /m=LICENSE_MODULE_ID /l=\"%AppData%\\iiko\\CashServer\\Logs\\plugin-PluginTemplate-DEBUG.log\" /c=$(TargetName).Program /n"
+    }
+  }
+}
